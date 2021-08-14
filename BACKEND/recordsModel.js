@@ -1,7 +1,7 @@
 // recordsModel.js
 var mongoose = require('mongoose');
 // Setup schema
-var recordSchema = mongoose.Schema({
+var recordSchema = new mongoose.Schema({
     patient_name: {
         type: String,
         required: true
@@ -11,12 +11,11 @@ var recordSchema = mongoose.Schema({
         required: true
     },
     patient_id: {
-        type: String,
-        required: true
+        type: String
     },
     drug_id: {
-        type: String,
-        required: true
+        type: String
+
     },
     diagnosis: {
         type: String,
@@ -44,7 +43,7 @@ var recordSchema = mongoose.Schema({
     }
 });
 // Export Contact model
-var Record = module.exports = mongoose.model('record', recordSchema);
+var Record = module.exports = mongoose.model('records', recordSchema);
 module.exports.get = function (callback, limit) {
     Record.find(callback).limit(limit);
 }

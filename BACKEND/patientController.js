@@ -31,7 +31,7 @@ exports.new = function (req, res) {
         // if (err)
         //     res.json(err);
         res.json({
-            message: 'New Drug created!',
+            message: 'New Patient  created!',
             data: patient
         });
     });

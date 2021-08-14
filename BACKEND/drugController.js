@@ -22,9 +22,9 @@ exports.index = function (req, res) {
 // Handle create Drugs actions
 exports.new = function (req, res) {
     var drug = new Drug();
-    drug.name = req.body.name ? req.body.name : drug.name;
+    drug.name = req.body.name;
     drug.constituent = req.body.constituent;
-    drug.total_count = req.body.count;
+    drug.total_count = req.body.total_count;
     drug.price = req.body.price;
     drug.expiry = req.body.expiry
     drug.purpose = req.body.purpose

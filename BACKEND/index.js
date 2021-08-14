@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb+srv://uche:Mcdaniel.1@cluster0.rrezh.mongodb.net/SBP?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://uche:Mcdaniel.1@cluster0.rrezh.mongodb.net/SBP?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 
 // Added check for DB connection
