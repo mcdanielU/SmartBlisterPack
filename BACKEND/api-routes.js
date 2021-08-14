@@ -30,8 +30,10 @@ router.route('/patients/:patient_id')
 router.route('/records')
     .get(recordsController.index)
     .post(recordsController.new);
-router.route('/drugs/:record_id')
+router.route('/records/:record_id')
     .get(recordsController.view)
+router.route('/records/patient/:record_id')
+    .get(recordsController.viewPatient)
 
 // Export API routes
 module.exports = router;

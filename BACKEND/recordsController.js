@@ -53,3 +53,15 @@ exports.view = function (req, res) {
         });
     });
 };
+
+//View a specific patient records
+exports.viewPatient = function (req, res) {
+    Record.find(req.params.patient_id, function (err, record) {
+        if (err)
+            res.send(err);
+        res.json({
+            message: 'Patient Record details loading..',
+            data: record
+        });
+    });
+};
